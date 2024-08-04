@@ -15,7 +15,7 @@ function moveCarousel(direction) {
     currentSlide = totalSlides - visibleSlides;
   const carousel = document.querySelector(".carousel");
   carousel.style.transform = `translateX(-${
-    (currentSlide * 100) / visibleSlides
+    (currentSlide * 33) / visibleSlides
   }%)`;
 }
 
@@ -55,3 +55,130 @@ carouselContainer.addEventListener("wheel", (event) => {
     moveCarousel(-1);
   }
 });
+
+
+
+/* <div class="top-rating">
+            <div class="button-container-second">
+              <button class="table-header">text</button>
+              <button class="table-header">text</button>
+              <button class="table-header">text</button>
+            </div>
+            <table>
+              <tr>
+                <th>№</th>
+                <th>Full Name</th>
+                <th>Rating</th>
+              </tr>
+              <tr>
+                <td class="numericia">1</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="numericia">1</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="numericia">1</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="numericia">1</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="numericia">1</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="numericia">1</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="numericia">1</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="numericia">1</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="numericia">1</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="numericia">1</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="numericia">1</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="numericia">1</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="numericia">1</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="numericia">1</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="numericia">1</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="numericia">1</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="numericia">1</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="numericia">1</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="numericia">1</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="numericia">1</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="numericia">1</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="numericia">1</td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+          </div>  */

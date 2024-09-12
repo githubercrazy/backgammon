@@ -1,23 +1,39 @@
 let currentSlide = 0;
 const totalSlides = document.querySelectorAll(".news-item").length;
-const visibleSlides = Math.floor(
-  document.querySelector(".carousel-container").clientWidth /
-    document.querySelector(".news-item").clientWidth
-);
-let isDown = false;
-let startX;
-let scrollLeft;
+const itemWidth = document.querySelector(".news-item").clientWidth;
+const containerWidth = document.querySelector(
+  ".carousel-container"
+).clientWidth;
+const visibleSlides = Math.floor(containerWidth / itemWidth);
+const scrollAmount = itemWidth * 0.5; // Adjust this value to slow down scrolling
 
 function moveCarousel(direction) {
   currentSlide += direction;
   if (currentSlide < 0) currentSlide = 0;
   if (currentSlide > totalSlides - visibleSlides)
     currentSlide = totalSlides - visibleSlides;
+
+  // Calculate the offset for scrolling
+  const offset = -currentSlide * itemWidth;
+
+  // Smooth scrolling using CSS transitions
   const carousel = document.querySelector(".carousel");
-  carousel.style.transform = `translateX(-${
-    (currentSlide * 33) / visibleSlides
-  }%)`;
+  carousel.style.transition = "transform 0.5s ease";
+  carousel.style.transform = `translateX(${offset}px)`;
 }
+
+// Adjust button event listeners for slower scrolling
+document
+  .querySelector(".prev")
+  .addEventListener("click", () => moveCarousel(-1));
+document
+  .querySelector(".next")
+  .addEventListener("click", () => moveCarousel(1));
+
+// Handling mouse drag and scroll
+let isDown = false;
+let startX;
+let scrollLeft;
 
 const carouselContainer = document.querySelector(".carousel-container");
 const carousel = document.querySelector(".carousel");
@@ -43,7 +59,7 @@ carouselContainer.addEventListener("mousemove", (e) => {
   if (!isDown) return;
   e.preventDefault();
   const x = e.pageX - carouselContainer.offsetLeft;
-  const walk = (x - startX) * 3; //scroll-fast
+  const walk = (x - startX) * 3; // scroll-fast
   carousel.scrollLeft = scrollLeft - walk;
 });
 
@@ -55,130 +71,3 @@ carouselContainer.addEventListener("wheel", (event) => {
     moveCarousel(-1);
   }
 });
-
-
-
-/* <div class="top-rating">
-            <div class="button-container-second">
-              <button class="table-header">text</button>
-              <button class="table-header">text</button>
-              <button class="table-header">text</button>
-            </div>
-            <table>
-              <tr>
-                <th>№</th>
-                <th>Full Name</th>
-                <th>Rating</th>
-              </tr>
-              <tr>
-                <td class="numericia">1</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="numericia">1</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="numericia">1</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="numericia">1</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="numericia">1</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="numericia">1</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="numericia">1</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="numericia">1</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="numericia">1</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="numericia">1</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="numericia">1</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="numericia">1</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="numericia">1</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="numericia">1</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="numericia">1</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="numericia">1</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="numericia">1</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="numericia">1</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="numericia">1</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="numericia">1</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="numericia">1</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td class="numericia">1</td>
-                <td></td>
-                <td></td>
-              </tr>
-            </table>
-          </div>  */

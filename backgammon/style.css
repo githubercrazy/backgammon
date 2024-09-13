@@ -113,7 +113,7 @@ body {
 }
 
 .navigation li:hover .dropdown-content,
-.navigation li .dropbtn:hover+.dropdown-content {
+.navigation li .dropbtn:hover + .dropdown-content {
   opacity: 1;
   visibility: visible;
   transition-delay: 0s;
@@ -147,8 +147,6 @@ body {
   max-width: 370px;
   /* Ensuring the image does not grow larger than its container */
 }
-
-
 
 .image img {
   width: 100%;
@@ -196,7 +194,6 @@ body {
   height: 30px;
 }
 
-
 .news-content {
   display: flex;
   gap: 10px;
@@ -217,8 +214,6 @@ body {
   max-width: 400px;
   gap: 10px;
 }
-
-
 
 .news-info a {
   color: black;
@@ -264,7 +259,7 @@ body {
 }
 
 .table-header::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -291,7 +286,6 @@ td {
   border-collapse: collapse;
 }
 
-
 table,
 th,
 td:first-child {
@@ -307,24 +301,24 @@ td.numericia {
   width: 5%;
 }
 
-
 .button-27 {
   appearance: none;
   max-width: 100px;
-  background-color: #08573C;
-  border: 2px solid #08573C;
+  background-color: #08573c;
+  border: 2px solid #08573c;
   border-radius: 15px;
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
   display: flex;
-  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 12px;
   line-height: normal;
   margin: 0;
   outline: none;
   text-align: center;
   text-decoration: none;
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -336,8 +330,7 @@ td.numericia {
 }
 
 .button-27:hover {
-  box-shadow:
-    rgba(8, 87, 60, 0.5) -3px -3px 15px,
+  box-shadow: rgba(8, 87, 60, 0.5) -3px -3px 15px,
     rgba(8, 87, 60, 0.5) 3px 5px 15px;
   transform: translateY(-2px);
 }
@@ -362,6 +355,7 @@ td.numericia {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  max-width: 300px;
 }
 
 .carousel-container,
@@ -376,7 +370,7 @@ td.numericia {
   overflow: hidden;
   border: 2px #06664489 solid;
   border-radius: 5px;
-  max-width: 600px;
+  max-width: 776px;
   height: 300px;
   position: relative;
 }
@@ -393,7 +387,6 @@ td.numericia {
   max-width: 353px;
   border: 1px solid #ccc;
 }
-
 
 .news-item img {
   max-width: 150px;
@@ -441,7 +434,7 @@ td.numericia {
   display: flex;
   gap: 30px;
   flex-direction: column;
-  max-width: 600px;
+  max-width: 780px;
 }
 
 .news-box {
@@ -468,7 +461,7 @@ td.numericia {
 }
 
 .news-box-header-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -495,7 +488,6 @@ td.numericia {
 .advertisment-table img {
   max-width: 480px;
 }
-
 
 .footer-container {
   background-color: #f1f1f1;
@@ -565,7 +557,7 @@ td.numericia {
 }
 
 .social-icon.wbgf:hover {
-  color: #A1D400;
+  color: #a1d400;
   /* Instagram pink */
 }
 

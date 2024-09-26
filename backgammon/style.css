@@ -93,13 +93,13 @@ body {
 .dropdown-content {
   background-color: #f9f9f9;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  visibility: hidden;
+  opacity: 0; 
+  visibility: hidden; 
   transition: opacity 0.3s ease, linear 0.3s;
   position: absolute;
   top: 100%;
   z-index: 20;
-  min-width: 280px;
+  min-width: 220px;
 }
 
 .dropdown-content a {
@@ -113,7 +113,7 @@ body {
 }
 
 .navigation li:hover .dropdown-content,
-.navigation li .dropbtn:hover + .dropdown-content {
+.navigation li .dropbtn:hover+.dropdown-content {
   opacity: 1;
   visibility: visible;
   transition-delay: 0s;
@@ -135,7 +135,23 @@ body {
   flex-direction: column;
 }
 
+.news-header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
 .news-header {
+  min-width: 790px;
+}
+
+.rating-header {
+  min-width: 300px;
+}
+
+.news-header,
+.rating-header {
   display: flex;
   justify-content: center;
   border: 1px #08573c solid;
@@ -145,13 +161,12 @@ body {
 .image {
   position: relative;
   max-width: 370px;
-  /* Ensuring the image does not grow larger than its container */
 }
 
 .image img {
   width: 100%;
   object-fit: cover;
-  min-height: 480px;
+  height: 100%;
 }
 
 .image-overlay {
@@ -194,6 +209,7 @@ body {
   height: 30px;
 }
 
+
 .news-content {
   display: flex;
   gap: 10px;
@@ -214,6 +230,8 @@ body {
   max-width: 400px;
   gap: 10px;
 }
+
+
 
 .news-info a {
   color: black;
@@ -259,7 +277,7 @@ body {
 }
 
 .table-header::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -286,6 +304,11 @@ td {
   border-collapse: collapse;
 }
 
+tr,
+td {
+  font-size: 17px;
+}
+
 table,
 th,
 td:first-child {
@@ -301,28 +324,30 @@ td.numericia {
   width: 5%;
 }
 
+
 .button-27 {
   appearance: none;
   max-width: 100px;
-  background-color: #08573c;
-  border: 2px solid #08573c;
+  background-color: #08573C;
+  border: 2px solid #08573C;
   border-radius: 15px;
-  color: #ffffff;
+  color: #FFFFFF;
   cursor: pointer;
   display: flex;
-  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 12px;
   line-height: normal;
   margin: 0;
   outline: none;
   text-align: center;
   text-decoration: none;
-  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   will-change: transform;
+  margin-left: 320px;
+  padding-left: 8px;
 }
 
 .button-27:disabled {
@@ -330,7 +355,8 @@ td.numericia {
 }
 
 .button-27:hover {
-  box-shadow: rgba(8, 87, 60, 0.5) -3px -3px 15px,
+  box-shadow:
+    rgba(8, 87, 60, 0.5) -3px -3px 15px,
     rgba(8, 87, 60, 0.5) 3px 5px 15px;
   transform: translateY(-2px);
 }
@@ -355,7 +381,6 @@ td.numericia {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 300px;
 }
 
 .carousel-container,
@@ -370,21 +395,32 @@ td.numericia {
   overflow: hidden;
   border: 2px #06664489 solid;
   border-radius: 5px;
-  max-width: 776px;
+  max-width: 600px;
+  /* You can also adjust this for responsiveness */
   height: 300px;
   position: relative;
 }
 
 .carousel {
   display: flex;
+  overflow: hidden;
+  /* Prevents overflow for the inner container */
+}
+
+.carousel-inner {
+  display: flex;
+  /* Added for scrolling functionality */
   transition: transform 0.5s ease;
+  /* Animation effect */
 }
 
 .news-item {
   flex: 0 0 calc(50% - 20px);
+  /* Base width for larger screens */
   padding: 10px;
   margin: 5px;
   max-width: 353px;
+  /* This can also be adjusted */
   border: 1px solid #ccc;
 }
 
@@ -398,6 +434,7 @@ td.numericia {
 .news-item span {
   font-weight: bold;
 }
+
 .news-viewmore {
   display: flex;
 }
@@ -434,7 +471,7 @@ td.numericia {
   display: flex;
   gap: 30px;
   flex-direction: column;
-  max-width: 780px;
+  max-width: 600px;
 }
 
 .news-box {
@@ -461,7 +498,7 @@ td.numericia {
 }
 
 .news-box-header-btn::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -486,8 +523,9 @@ td.numericia {
 }
 
 .advertisment-table img {
-  max-width: 480px;
+  max-width: 433px;
 }
+
 
 .footer-container {
   background-color: #f1f1f1;
@@ -557,7 +595,7 @@ td.numericia {
 }
 
 .social-icon.wbgf:hover {
-  color: #a1d400;
+  color: #A1D400;
   /* Instagram pink */
 }
 
@@ -582,4 +620,111 @@ td.numericia {
 .footer-bottom p {
   margin: 0;
   font-size: 0.9em;
+}
+
+@media (max-width: 1366px) {
+  .image {
+    position: relative;
+    max-width: 298px;
+    max-height: 398px;
+  }
+
+  .image img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .image-text {
+    font-size: 15px;
+  }
+
+  .news-header-content {
+    gap: 15px;
+  }
+
+  .news-header {
+    min-width: 700px;
+  }
+
+  .rating-header {
+    min-width: 305px;
+  }
+
+  .news-info-main {
+    display: none;
+  }
+
+  .news-table-infos {
+    max-height: 430px;
+  }
+
+  .news-item {
+    flex: 0 0 calc(56.33% - 20px);
+    /* Three items in a row */
+    max-width: calc(20.33% - 20px);
+    /* Adjust max-width for three columns */
+  }
+
+  tr:nth-last-child(1) {
+    display: none;
+  }
+
+  tr:nth-last-child(2) {
+    display: none;
+  }
+
+  tr:nth-last-child(3) {
+    display: none;
+  }
+
+  tr:nth-last-child(4) {
+    display: none;
+  }
+
+  .info-content {
+    max-width: 1025px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .image-text {
+    font-size: 15px;
+  }
+
+  .news-header {
+    max-width: 700px;
+  }
+
+  .rating-header {
+    max-width: 305px;
+  }
+
+  .news-item {
+    max-width: 180px;
+  }
+
+  .button-27 {
+    margin-left: 200px;
+  }
+
+  .news-header-content {
+    gap: 6px;
+  }
+
+  .news-header {
+    min-width: 620px;
+  }
+
+  .rating-header {
+    min-width: 300px;
+  }
+
+  .news-item {
+    max-width: calc(20% - 20px);
+  }
+  .advertisment-table img{
+    max-width: 400px;
+  }
+
 }

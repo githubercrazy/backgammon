@@ -93,8 +93,8 @@ body {
 .dropdown-content {
   background-color: #f9f9f9;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  opacity: 0; 
-  visibility: hidden; 
+  opacity: 0;
+  visibility: hidden;
   transition: opacity 0.3s ease, linear 0.3s;
   position: absolute;
   top: 100%;
@@ -143,7 +143,7 @@ body {
 }
 
 .news-header {
-  min-width: 790px;
+  min-width: 780px;
 }
 
 .rating-header {
@@ -323,10 +323,13 @@ td.numericia {
   border-bottom: 0;
   width: 5%;
 }
-.table-button-container{
+
+.table-button-container {
   display: flex;
   justify-content: flex-end;
+  margin-top: 3px;
 }
+
 .news-button-container {
   display: flex;
   justify-content: flex-end;
@@ -354,32 +357,79 @@ td.numericia {
   padding-left: 8px;
   padding-right: 8px;
 }
+.button-27:disabled {
+  pointer-events: none;
+}
+
+.button-27:hover {
+  transform: translateY(-2px);
+}
+
+.button-27:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
 .info-header-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   margin-top: 25px;
 }
-.info-news-header{
-  min-width: 790px;
+
+.info-news-header {
+  min-width: 780px;
 }
-.info-rating-header{
+
+.info-rating-header {
   min-width: 300px;
 }
 
 .info-rating-header,
-.info-news-header{
+.info-news-header {
   display: flex;
   justify-content: center;
   border: 1px #08573c solid;
   border-radius: 5px;
 }
+.rating-button{
+  appearance: none;
+  max-width: 100px;
+  background-color: #08573C;
+  border: 2px solid #08573C;
+  border-radius: 15px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 12px;
+  line-height: normal;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.rating-button:disabled {
+  pointer-events: none;
+}
 
+.rating-button:hover {
+  transform: translateY(-2px);
+}
+
+.rating-button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
 .info-content {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 8px;
+  gap: 10px;
   margin: 0 auto;
   padding-top: 20px;
   position: relative;
@@ -414,23 +464,18 @@ td.numericia {
 .carousel {
   display: flex;
   overflow: hidden;
-  /* Prevents overflow for the inner container */
 }
 
 .carousel-inner {
   display: flex;
-  /* Added for scrolling functionality */
   transition: transform 0.5s ease;
-  /* Animation effect */
 }
 
 .news-item {
   flex: 0 0 calc(50% - 20px);
-  /* Base width for larger screens */
   padding: 10px;
   margin: 5px;
   max-width: 353px;
-  /* This can also be adjusted */
   border: 1px solid #ccc;
 }
 
@@ -611,10 +656,8 @@ td.numericia {
 
 .social-icon.linkedin:hover {
   color: #0077b5;
-  /* LinkedIn blue */
 }
 
-/* Optional: Add active state or focus state for better accessibility */
 .social-icon:active,
 .social-icon:focus {
   outline: none;
@@ -650,19 +693,34 @@ td.numericia {
   }
 
   .news-header-content {
-    gap: 15px;
+    gap: 8px;
   }
 
+  .carousel-container {
+    max-width: 715px;
+  }
+
+  .info-news-header {
+    min-width: 708px;
+    background-color: green;
+  }
+
+ 
+
   .news-header {
-    min-width: 700px;
+    min-width: 708px;
+    background-color: green;
   }
 
   .rating-header {
-    min-width: 305px;
+    min-width: 300px;
+
   }
-  .news-info{
+
+  .news-info {
     height: 52px;
   }
+
   .news-info-main {
     display: none;
   }
@@ -673,9 +731,7 @@ td.numericia {
 
   .news-item {
     flex: 0 0 calc(56.33% - 20px);
-    /* Three items in a row */
     max-width: calc(20.33% - 20px);
-    /* Adjust max-width for three columns */
   }
 
   tr:nth-last-child(1) {
@@ -697,6 +753,10 @@ td.numericia {
   .info-content {
     max-width: 1025px;
   }
+
+  .advertisment-table {
+    max-width: 304px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -705,33 +765,29 @@ td.numericia {
   }
 
   .news-header {
-    max-width: 700px;
+    min-width: 615px;
+    background-color: red;
   }
 
-  .rating-header {
-    max-width: 305px;
-  }
 
   .news-item {
     max-width: 180px;
   }
 
   .news-header-content {
-    gap: 6px;
+    gap: 10px;
   }
 
-  .news-header {
-    min-width: 620px;
-  }
-
-  .rating-header {
-    min-width: 300px;
+  .info-news-header {
+    min-width: 615px;
+    background-color: red;
   }
 
   .news-item {
     max-width: calc(20% - 20px);
   }
-  .advertisment-table img{
+
+  .advertisment-table img {
     max-width: 400px;
   }
 

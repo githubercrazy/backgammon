@@ -3,6 +3,7 @@
   text-decoration: none;
   padding: 0;
   margin: 0;
+  text-decoration: none;
 }
 
 body {
@@ -258,11 +259,19 @@ body {
 }
 
 .top-rating {
+  display: flex;
+  /* Use flexbox for layout */
+  flex-direction: column;
+  /* Stack items vertically */
   overflow: hidden;
+  /* Hide any overflow content */
 }
 
 .button-container-second {
   display: flex;
+  /* Flex container for buttons */
+  justify-content: space-between;
+  /* Distribute buttons evenly */
 }
 
 .table-header {
@@ -292,9 +301,7 @@ body {
   width: 100%;
 }
 
-.button-container {
-  display: flex;
-}
+
 
 table,
 th,
@@ -302,6 +309,7 @@ td {
   border-left: 1px solid black;
   border-right: 1px solid black;
   border-collapse: collapse;
+  /* Ensure table takes full width */
 }
 
 tr,
@@ -321,7 +329,23 @@ tr:nth-child(even) {
 
 td.numericia {
   border-bottom: 0;
-  width: 5%;
+}
+
+.rating-text {
+  display: inline-block;
+  padding: 10px 15px;
+  color: rgb(37, 36, 36);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.rating-text:hover {
+  transform: scale(1.05);
+}
+
+.rating-text:active {
+  transform: scale(0.95);
 }
 
 .table-button-container {
@@ -329,6 +353,13 @@ td.numericia {
   justify-content: flex-end;
   margin-top: 3px;
 }
+
+.table-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3px;
+}
+
 
 .news-button-container {
   display: flex;
@@ -357,6 +388,7 @@ td.numericia {
   padding-left: 8px;
   padding-right: 8px;
 }
+
 .button-27:disabled {
   pointer-events: none;
 }
@@ -369,6 +401,7 @@ td.numericia {
   box-shadow: none;
   transform: translateY(0);
 }
+
 .info-header-content {
   display: flex;
   justify-content: center;
@@ -392,7 +425,8 @@ td.numericia {
   border: 1px #08573c solid;
   border-radius: 5px;
 }
-.rating-button{
+
+.rating-button {
   appearance: none;
   max-width: 100px;
   background-color: #08573C;
@@ -414,18 +448,20 @@ td.numericia {
   padding-left: 8px;
   padding-right: 8px;
 }
+
 .rating-button:disabled {
   pointer-events: none;
 }
 
 .rating-button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2 px);
 }
 
 .rating-button:active {
   box-shadow: none;
   transform: translateY(0);
 }
+
 .info-content {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -705,7 +741,7 @@ td.numericia {
     background-color: green;
   }
 
- 
+
 
   .news-header {
     min-width: 708px;

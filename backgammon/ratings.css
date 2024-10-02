@@ -1,0 +1,394 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.rating-container {
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.rating-content {
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
+    justify-content: space-between;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner {
+    max-width: 1180px;
+}
+
+.banner img {
+    padding: 0 40px;
+    width: 100%;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+}
+
+.login-form input {
+    max-width: 200px;
+    display: flex;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.login-form button {
+    flex: 1;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: #08573c;
+    color: white;
+    width: 100px;
+}
+
+.signup-btn {
+    background-color: #fff;
+    color: black;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    background-color: rgb(241, 241, 241);
+    /* max-width: 1090px; */
+    margin: 10px auto;
+}
+
+.navigation ul {
+    gap: 80px;
+    display: flex;
+}
+
+.navigation li {
+    display: flex;
+    padding: 10px 0px;
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, linear 0.3s;
+    position: absolute;
+    top: 100%;
+    z-index: 20;
+    min-width: 220px;
+}
+
+.dropdown-content a {
+    display: flex;
+    padding: 12px 16px;
+    color: #07744e;
+}
+
+.dropbtn {
+    cursor: pointer;
+}
+
+.navigation li:hover .dropdown-content,
+.navigation li .dropbtn:hover+.dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+.sub-dropdown {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navigation li:hover .sub-dropdown {
+    display: flex;
+    opacity: 1;
+}
+
+.image {
+    display: flex;
+}
+
+.image img {
+    max-width: 300px;
+    object-fit: cover;
+}
+
+.player-table-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.player-name {
+    font-weight: normal;
+    color: #444141;
+    padding-left: 10px;
+}
+
+.player-info-text {
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 5px 5px 5px;
+}
+
+.player-stats {
+    border: 1px solid #000;
+    padding: 0.5rem;
+    display: flex;
+    min-width: 733px;
+    gap: 20px;
+}
+
+.left,
+.right {
+    padding: 0.5rem;
+    flex: 1;
+    /* Use flex: 1 to ensure both take equal width */
+    display: flex;
+    flex-direction: column;
+    /* Align items vertically */
+    justify-content: space-between;
+    /* Distribute space evenly */
+    color: black;
+}
+
+.object {
+    padding-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.chart-container {
+    max-width: 166px;
+    position: relative;
+}
+
+.chart {
+    border: 1px solid #ddd;
+}
+
+#graph-path {
+    stroke: #3498db;
+    stroke-width: 2;
+    stroke-linejoin: round;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw-path 5s forwards ease-out;
+}
+
+@keyframes draw-path {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.win-rate-container {
+    display: flex;
+    max-width: 330px;
+    min-height: 34px;
+    border: 1px solid #ddd;
+    position: relative;
+    justify-content: space-around;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+}
+
+
+.win-text {
+    background-color: #f54020;
+    flex: 42.86;
+    /* 42.86% width */
+    text-align: center;
+    padding: 10px;
+    color: rgb(232, 232, 232);
+}
+
+.lose-text {
+    background-color: rgb(18, 146, 18);
+    flex: 57.14;
+    /* 57.14% width */
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-container {
+    background-color: #f1f1f1;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+    border-top: 1px solid black;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    gap: 10px;
+}
+
+/* Base style for social icons */
+.social-icon {
+    text-decoration: none;
+    color: #333;
+    /* Default color */
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+/* Specific colors for each platform on hover */
+.social-icon.facebook:hover {
+    color: #1877f2;
+    /* Facebook blue */
+}
+
+.social-icon.twitter:hover {
+    color: #1da1f2;
+    /* Twitter blue */
+}
+
+.social-icon.wbgf:hover {
+    color: #A1D400;
+    /* Instagram pink */
+}
+
+.social-icon.linkedin:hover {
+    color: #0077b5;
+}
+
+.social-icon:active,
+.social-icon:focus {
+    outline: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #ddd;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9em;
+}
